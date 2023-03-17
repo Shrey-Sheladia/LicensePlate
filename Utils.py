@@ -4,9 +4,6 @@ import pyperclip
 import json
 import time
 
-
-
-
 pp = pprint.PrettyPrinter(indent=4)
 
 
