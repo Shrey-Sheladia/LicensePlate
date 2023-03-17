@@ -13,7 +13,7 @@ def display_table_without_index(data):
     df = pd.DataFrame(list(data.items()), columns=['Attribute', 'Value'])
     st.table(df)
 
-
+st.set_page_config(page_title="License Plate Information", layout="centered")
 st.title("License Plate Information")
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
