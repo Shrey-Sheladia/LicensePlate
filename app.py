@@ -22,6 +22,9 @@ license_plate_input = st.text_input("Enter License Plate Number:")
 
 if license_plate_input:
     info1, info2 = getInfo(license_plate_input)
+    if info1 == "Error":
+        st.warning("Internal Error")
+
     if info1:
         st.subheader("Vehicle Information")
         display_table_without_index(info1)

@@ -39,7 +39,10 @@ def getInfo(plate):
 
     r = requests.get(URL, headers=headers)
 
-    if r.status_code != 200 or 'errors' in r.json():
+    if r.status_code != 200:
+        return "Error", "Error"
+
+    if 'errors' in r.json():
         return None, None
     
     
