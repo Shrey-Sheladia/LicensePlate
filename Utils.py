@@ -4,6 +4,7 @@ import pyperclip
 import json
 import time
 
+
 pp = pprint.PrettyPrinter(indent=4)
 
 
@@ -38,9 +39,9 @@ def getInfo(plate):
 
     r = requests.get(URL, headers=headers)
 
-    if 'errors' in r.json():
+    if r.status_code != 200 or 'errors' in r.json():
         return None, None
-
+    
     
 
     
@@ -85,7 +86,7 @@ def getInfo(plate):
 
 
 if __name__ == "__main__":
-    plateNum = "gj01rd7866"
+    plateNum = "gj01vj7866"
 
     times = []
 
